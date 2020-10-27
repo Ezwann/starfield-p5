@@ -13,7 +13,7 @@ function Star() {
         noStroke();
         this.sx = map(this.pos.x / this.pos.z, 0, 1, 0, width);
         this.sy = map(this.pos.y / this.pos.z, 0, 1, 0, height * 2);
-        ellipse(this.sx, this.sy, 1);
+        ellipse(this.sx, this.sy, 2);
     }
 
     this.color = color(random(1, 255), random(1, 255), random(1, 255));
@@ -24,7 +24,7 @@ function setup() {
     createSpan("Z increment control : ");
     zSlider = createSlider(1, 20, 1, 1);
     text = createSpan(floor(frameRate()));
-    stars = new Array(5000);
+    stars = new Array(800);
     for (let i = 0; i < stars.length; i++) {
         stars[i] = new Star();
     }
